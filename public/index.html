@@ -12,13 +12,29 @@
     <input type="button" id="alertBtn" value="alert" onclick="alertFun()"/>
     <input type="button" value="confirm" onclick="confirmFun()"/>
     <input type="button" value="prompt" onclick="promptFun()"/>
-
+    <p onclick ="e(this)" id="p">ghj</p>
     <span id="result"></span>
+    
+     <script>
+   function alertFun(){
+    alert("Hello !");
+   }
 
-    <script>
+   function confirmFun(){
+     let didConfirm = confirm("Are you sure about that?");
+     if(didConfirm){
+       alert("You confirmed :)");
+     }else{
+      alert("You did not confirm :(");
+     }
+   }
 
+   function promptFun(){
+    let val = prompt("What is your name?");
+    alert(`You've entered: ${val}`);
+   }
 
-    </script>
+  </script>
     <script src="script.js"></script>
   </body>
 </html>
